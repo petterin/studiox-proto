@@ -83,9 +83,29 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Jr-L6-lQ7">
                                 <rect key="frame" x="0.0" y="-20" width="1030" height="788"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qhb-xv-Wyc" appends="YES" id="5g8-dK-Ze8"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player_record.png" translatesAutoresizingMaskIntoConstraints="NO" id="YGN-ko-2Bn">
+                                <rect key="frame" x="395" y="310" width="240" height="136"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7g-cj-Ibv">
+                                <rect key="frame" x="425" y="310" width="180" height="127"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="controllerTapped:" destination="wXT-d9-dHq" eventType="touchUpInside" id="NZ7-vu-8H9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rec-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zb2-LV-hjv">
+                                <rect key="frame" x="928" y="32" width="80" height="37"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -93,10 +113,17 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="controllerImageView" destination="YGN-ko-2Bn" id="fZa-TH-I6S"/>
                         <outlet property="imageView" destination="0Jr-L6-lQ7" id="6Av-1C-l9F"/>
+                        <outlet property="recordIndicatorView" destination="Zb2-LV-hjv" id="FYB-vX-y9W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvd-e8-IoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qhb-xv-Wyc">
+                    <connections>
+                        <action selector="imageTapped:" destination="wXT-d9-dHq" id="6UL-Lh-9t7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2966" y="-320"/>
         </scene>
@@ -183,6 +210,8 @@
         <image name="CameraRoll-Image.png" width="426" height="434"/>
         <image name="ImageRow.png" width="1438" height="280"/>
         <image name="first" width="30" height="30"/>
+        <image name="player_record.png" width="128" height="128"/>
+        <image name="rec-image.png" width="252" height="252"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

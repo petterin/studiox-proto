@@ -3,8 +3,15 @@ import UIKit
 class ImageController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var recordIndicatorView: UIImageView!
+    @IBOutlet weak var controllerImageView: UIImageView!
     let swipeRec = UISwipeGestureRecognizer()
     let imageList = ["ImageRowImage1","ImageRowImage2", "ImageRowImage3"]
+    let recImage = UIImage(named: "player_record")
+    let pauseImage = UIImage(named: "pause-icon")
+    var controllerVisible: Bool = true
+    
     var imageIndex = 0
     
     override func viewDidLoad() {
@@ -13,7 +20,8 @@ class ImageController: UIViewController {
         imageView.addGestureRecognizer(swipeRec)
         imageView.userInteractionEnabled = true
         imageView.image = UIImage(named: imageList[0])
-        imageView.frame = UIScreen.mainScreen().applicationFrame;
+        imageView.frame = UIScreen.mainScreen().applicationFrame
+        recordIndicatorView.hidden = true
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -29,6 +37,7 @@ class ImageController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -72,9 +81,26 @@ class ImageController: UIViewController {
                 
             }
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
-
-            
-        
-    
     }
+    
+    @IBAction func controllerTapped(sender : AnyObject) {
+        if(controllerImageView.image == pauseImage) {
+            controllerImageView.image = recImage
+            recordIndicatorView.hidden = true
+            
+        }
+        else {
+            controllerImageView.image = pauseImage
+            recordIndicatorView.hidden = false
+            controllerImageView.hidden = true
+        }
+        
+    }
+    
+    @IBAction func imageTapped(sender : AnyObject) {
+        controllerImageView.hidden = !controllerImageView.hidden
+    }
+    
+    
+
 }
