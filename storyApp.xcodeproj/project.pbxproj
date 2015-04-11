@@ -23,6 +23,7 @@
 		E69E1B141AD99C01007573E6 /* player_record.png in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B131AD99C01007573E6 /* player_record.png */; };
 		E69E1B161AD9A253007573E6 /* pause-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B151AD9A253007573E6 /* pause-icon.png */; };
 		E69E1B181AD9A9BD007573E6 /* rec-image.png in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B171AD9A9BD007573E6 /* rec-image.png */; };
+		E69E1B1A1AD9CAAE007573E6 /* CameraRollWithoutText.png in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B191AD9CAAE007573E6 /* CameraRollWithoutText.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		E69E1B131AD99C01007573E6 /* player_record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_record.png; sourceTree = "<group>"; };
 		E69E1B151AD9A253007573E6 /* pause-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-icon.png"; sourceTree = "<group>"; };
 		E69E1B171AD9A9BD007573E6 /* rec-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rec-image.png"; sourceTree = "<group>"; };
+		E69E1B191AD9CAAE007573E6 /* CameraRollWithoutText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraRollWithoutText.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				E69E1B131AD99C01007573E6 /* player_record.png */,
 				E69E1B151AD9A253007573E6 /* pause-icon.png */,
 				E69E1B171AD9A9BD007573E6 /* rec-image.png */,
+				E69E1B191AD9CAAE007573E6 /* CameraRollWithoutText.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,6 +228,7 @@
 				E69E1B141AD99C01007573E6 /* player_record.png in Resources */,
 				E69E1B181AD9A9BD007573E6 /* rec-image.png in Resources */,
 				E69E1B161AD9A253007573E6 /* pause-icon.png in Resources */,
+				E69E1B1A1AD9CAAE007573E6 /* CameraRollWithoutText.png in Resources */,
 				E69E1AEB1AD97A20007573E6 /* Main.storyboard in Resources */,
 				E69E1B0A1AD97CCD007573E6 /* ImageRow.png in Resources */,
 				E69E1B081AD97B2E007573E6 /* CameraRoll-Image.png in Resources */,
