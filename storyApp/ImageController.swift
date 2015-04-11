@@ -93,7 +93,16 @@ class ImageController: UIViewController {
     }
     
     func recordingDone() {
-        println("recordingDone");
+        var alert = UIAlertController(title: "Save", message: "Please give a name for your story", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: saveCompletionHandler))
+        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "Amazing story"
+        })
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func saveCompletionHandler(action:UIAlertAction!) {
+        self.tabBarController?.selectedIndex = 1
     }
     
     @IBAction func controllerTapped(sender : AnyObject) {
