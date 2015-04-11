@@ -10,7 +10,7 @@ class ImageController: UIViewController {
     let imageList = ["ImageRowImage1","ImageRowImage2", "ImageRowImage3"]
     let recImage = UIImage(named: "player_record")
     let pauseImage = UIImage(named: "pause-icon")
-    var controllerVisible: Bool = true
+    var recordingStartedAtLeastOnce = false
     
     var imageIndex = 0
     
@@ -22,15 +22,24 @@ class ImageController: UIViewController {
         imageView.image = UIImage(named: imageList[0])
         imageView.frame = UIScreen.mainScreen().applicationFrame
         recordIndicatorView.hidden = true
+                println(self.navigationController?.navigationBar.topItem?.leftBarButtonItem)
+    }
+    
+    func showSave() {
+        let saveButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.Done, target: self, action: "recordingDone")
+        self.navigationController?.navigationBar.topItem?.rightBarButtonItem = saveButton
+    }
+    
+    func hideSave() {
+         self.navigationController?.navigationBar.topItem?.rightBarButtonItem = nil
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setToolbarHidden(true, animated: false)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.setToolbarHidden(false, animated: false)
+        //self.navigationController?.setToolbarHidden(false, animated: false)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
@@ -83,6 +92,10 @@ class ImageController: UIViewController {
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
     }
     
+    func recordingDone() {
+        println("recordingDone");
+    }
+    
     @IBAction func controllerTapped(sender : AnyObject) {
         if(controllerImageView.image == pauseImage) {
             controllerImageView.image = recImage
@@ -90,15 +103,21 @@ class ImageController: UIViewController {
             
         }
         else {
+            recordingStartedAtLeastOnce = true
             controllerImageView.image = pauseImage
             recordIndicatorView.hidden = false
             controllerImageView.hidden = true
+            self.navigationController?.setNavigationBarHidden(!self.navigationController!.navigationBarHidden, animated: false)
         }
         
     }
     
     @IBAction func imageTapped(sender : AnyObject) {
         controllerImageView.hidden = !controllerImageView.hidden
+        self.navigationController?.setNavigationBarHidden(!self.navigationController!.navigationBarHidden, animated: false)
+        if(controllerImageView.hidden == false && recordingStartedAtLeastOnce) {
+                showSave()
+        }
     }
     
     
