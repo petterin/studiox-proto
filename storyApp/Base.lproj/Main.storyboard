@@ -215,6 +215,15 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1St-Wb-tlO">
+                                <rect key="frame" x="459" y="85" width="251" height="234"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mdK-eZ-jX1" kind="show" id="Onl-PA-gMn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -264,11 +273,66 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Viewer Controller-->
+        <scene sceneID="ch7-fU-dIS">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="mdK-eZ-jX1" customClass="ViewerController" customModule="storyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EdK-tV-Fim"/>
+                        <viewControllerLayoutGuide type="bottom" id="pfs-bC-7MN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vX0-rc-MRd">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHZ-qH-mg1">
+                                <rect key="frame" x="0.0" y="-20" width="1030" height="788"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kZx-R6-g3V" appends="YES" id="LSY-d7-nRL"/>
+                                </connections>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvT-i7-bEu">
+                                <rect key="frame" x="395" y="310" width="240" height="136"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xav-eB-MeJ">
+                                <rect key="frame" x="425" y="310" width="180" height="127"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="controllerTapped:" destination="mdK-eZ-jX1" eventType="touchUpInside" id="8eV-aw-t7G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="controllerImageView" destination="WvT-i7-bEu" id="lp4-5t-zCr"/>
+                        <outlet property="imageView" destination="oHZ-qH-mg1" id="AnQ-CA-L7Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZ0-tV-T06" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kZx-R6-g3V">
+                    <connections>
+                        <action selector="imageTapped:" destination="mdK-eZ-jX1" id="rkf-s9-lBg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1891" y="1596"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CameraRollWithoutText.png" width="364" height="254"/>
         <image name="ImageRow.png" width="1438" height="280"/>
         <image name="first" width="30" height="30"/>
+        <image name="play_icon.png" width="174" height="174"/>
         <image name="player_record.png" width="128" height="128"/>
         <image name="rec-image.png" width="252" height="252"/>
         <image name="second" width="30" height="30"/>

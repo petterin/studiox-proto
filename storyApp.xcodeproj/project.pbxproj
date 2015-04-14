@@ -24,6 +24,18 @@
 		E69E1B161AD9A253007573E6 /* pause-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B151AD9A253007573E6 /* pause-icon.png */; };
 		E69E1B181AD9A9BD007573E6 /* rec-image.png in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B171AD9A9BD007573E6 /* rec-image.png */; };
 		E69E1B1A1AD9CAAE007573E6 /* CameraRollWithoutText.png in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B191AD9CAAE007573E6 /* CameraRollWithoutText.png */; };
+		E69E1B1E1ADD8430007573E6 /* ViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69E1B1D1ADD8430007573E6 /* ViewerController.swift */; };
+		E69E1B201ADD8587007573E6 /* play_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B1F1ADD8587007573E6 /* play_icon.png */; };
+		E69E1B351ADD943C007573E6 /* story1_audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B301ADD943C007573E6 /* story1_audio.m4a */; };
+		E69E1B361ADD943C007573E6 /* story2_audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B311ADD943C007573E6 /* story2_audio.m4a */; };
+		E69E1B371ADD943C007573E6 /* story3_audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B321ADD943C007573E6 /* story3_audio.m4a */; };
+		E69E1B381ADD943C007573E6 /* story4_audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B331ADD943C007573E6 /* story4_audio.m4a */; };
+		E69E1B391ADD943C007573E6 /* story5_audio.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B341ADD943C007573E6 /* story5_audio.m4a */; };
+		E69E1B3F1ADD9453007573E6 /* story2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B3A1ADD9453007573E6 /* story2.jpg */; };
+		E69E1B401ADD9453007573E6 /* story3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B3B1ADD9453007573E6 /* story3.jpg */; };
+		E69E1B411ADD9453007573E6 /* story4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B3C1ADD9453007573E6 /* story4.jpg */; };
+		E69E1B421ADD9453007573E6 /* story5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B3D1ADD9453007573E6 /* story5.jpg */; };
+		E69E1B431ADD9453007573E6 /* story1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69E1B3E1ADD9453007573E6 /* story1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +70,18 @@
 		E69E1B151AD9A253007573E6 /* pause-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-icon.png"; sourceTree = "<group>"; };
 		E69E1B171AD9A9BD007573E6 /* rec-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rec-image.png"; sourceTree = "<group>"; };
 		E69E1B191AD9CAAE007573E6 /* CameraRollWithoutText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraRollWithoutText.png; sourceTree = "<group>"; };
+		E69E1B1D1ADD8430007573E6 /* ViewerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewerController.swift; sourceTree = "<group>"; };
+		E69E1B1F1ADD8587007573E6 /* play_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_icon.png; sourceTree = "<group>"; };
+		E69E1B301ADD943C007573E6 /* story1_audio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = story1_audio.m4a; sourceTree = "<group>"; };
+		E69E1B311ADD943C007573E6 /* story2_audio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = story2_audio.m4a; sourceTree = "<group>"; };
+		E69E1B321ADD943C007573E6 /* story3_audio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = story3_audio.m4a; sourceTree = "<group>"; };
+		E69E1B331ADD943C007573E6 /* story4_audio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = story4_audio.m4a; sourceTree = "<group>"; };
+		E69E1B341ADD943C007573E6 /* story5_audio.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = story5_audio.m4a; sourceTree = "<group>"; };
+		E69E1B3A1ADD9453007573E6 /* story2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = story2.jpg; sourceTree = "<group>"; };
+		E69E1B3B1ADD9453007573E6 /* story3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = story3.jpg; sourceTree = "<group>"; };
+		E69E1B3C1ADD9453007573E6 /* story4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = story4.jpg; sourceTree = "<group>"; };
+		E69E1B3D1ADD9453007573E6 /* story5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = story5.jpg; sourceTree = "<group>"; };
+		E69E1B3E1ADD9453007573E6 /* story1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = story1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +117,17 @@
 				E69E1B151AD9A253007573E6 /* pause-icon.png */,
 				E69E1B171AD9A9BD007573E6 /* rec-image.png */,
 				E69E1B191AD9CAAE007573E6 /* CameraRollWithoutText.png */,
+				E69E1B1F1ADD8587007573E6 /* play_icon.png */,
+				E69E1B301ADD943C007573E6 /* story1_audio.m4a */,
+				E69E1B311ADD943C007573E6 /* story2_audio.m4a */,
+				E69E1B321ADD943C007573E6 /* story3_audio.m4a */,
+				E69E1B331ADD943C007573E6 /* story4_audio.m4a */,
+				E69E1B341ADD943C007573E6 /* story5_audio.m4a */,
+				E69E1B3A1ADD9453007573E6 /* story2.jpg */,
+				E69E1B3B1ADD9453007573E6 /* story3.jpg */,
+				E69E1B3C1ADD9453007573E6 /* story4.jpg */,
+				E69E1B3D1ADD9453007573E6 /* story5.jpg */,
+				E69E1B3E1ADD9453007573E6 /* story1.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +148,7 @@
 				E69E1AE71AD97A20007573E6 /* SecondViewController.swift */,
 				E69E1AE91AD97A20007573E6 /* Main.storyboard */,
 				E69E1B111AD98436007573E6 /* ImageController.swift */,
+				E69E1B1D1ADD8430007573E6 /* ViewerController.swift */,
 				E69E1AEC1AD97A20007573E6 /* Images.xcassets */,
 				E69E1AEE1AD97A20007573E6 /* LaunchScreen.xib */,
 				E69E1AE11AD97A20007573E6 /* Supporting Files */,
@@ -225,6 +261,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69E1B381ADD943C007573E6 /* story4_audio.m4a in Resources */,
+				E69E1B361ADD943C007573E6 /* story2_audio.m4a in Resources */,
 				E69E1B141AD99C01007573E6 /* player_record.png in Resources */,
 				E69E1B181AD9A9BD007573E6 /* rec-image.png in Resources */,
 				E69E1B161AD9A253007573E6 /* pause-icon.png in Resources */,
@@ -232,10 +270,19 @@
 				E69E1AEB1AD97A20007573E6 /* Main.storyboard in Resources */,
 				E69E1B0A1AD97CCD007573E6 /* ImageRow.png in Resources */,
 				E69E1B081AD97B2E007573E6 /* CameraRoll-Image.png in Resources */,
+				E69E1B371ADD943C007573E6 /* story3_audio.m4a in Resources */,
+				E69E1B3F1ADD9453007573E6 /* story2.jpg in Resources */,
 				E69E1AF01AD97A20007573E6 /* LaunchScreen.xib in Resources */,
+				E69E1B351ADD943C007573E6 /* story1_audio.m4a in Resources */,
+				E69E1B201ADD8587007573E6 /* play_icon.png in Resources */,
+				E69E1B411ADD9453007573E6 /* story4.jpg in Resources */,
+				E69E1B391ADD943C007573E6 /* story5_audio.m4a in Resources */,
 				E69E1B0E1AD98268007573E6 /* imageRowImage1.png in Resources */,
 				E69E1B0F1AD98268007573E6 /* ImageRowImage2.png in Resources */,
 				E69E1B101AD98268007573E6 /* ImageRowImage3.png in Resources */,
+				E69E1B401ADD9453007573E6 /* story3.jpg in Resources */,
+				E69E1B421ADD9453007573E6 /* story5.jpg in Resources */,
+				E69E1B431ADD9453007573E6 /* story1.jpg in Resources */,
 				E69E1AED1AD97A20007573E6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +304,7 @@
 				E69E1AE81AD97A20007573E6 /* SecondViewController.swift in Sources */,
 				E69E1AE41AD97A20007573E6 /* AppDelegate.swift in Sources */,
 				E69E1AE61AD97A20007573E6 /* FirstViewController.swift in Sources */,
+				E69E1B1E1ADD8430007573E6 /* ViewerController.swift in Sources */,
 				E69E1B121AD98436007573E6 /* ImageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +499,7 @@
 				E69E1B011AD97A20007573E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E69E1B021AD97A20007573E6 /* Build configuration list for PBXNativeTarget "storyAppTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +508,7 @@
 				E69E1B041AD97A20007573E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
