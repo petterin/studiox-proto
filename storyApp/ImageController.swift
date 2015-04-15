@@ -100,7 +100,7 @@ class ImageController: UIViewController {
     func saveCompletionHandler(action:UIAlertAction!) {
         let storyboard  = UIStoryboard(name: "Main", bundle: nil)
         
-        let newStoriesController = storyboard.instantiateViewControllerWithIdentifier("mockStoriesAfterRecord") as UIViewController
+        let newStoriesController = storyboard.instantiateViewControllerWithIdentifier("mockStoriesAfterRecord") as! UIViewController
         var oldTabs = self.tabBarController?.viewControllers
         oldTabs![1] = newStoriesController
         self.tabBarController?.setViewControllers(oldTabs!, animated: false)
