@@ -6,7 +6,7 @@ class ImageController: UIViewController {
     
     @IBOutlet weak var recordIndicatorView: UIImageView!
     @IBOutlet weak var controllerImageView: UIImageView!
-    let swipeRec = UISwipeGestureRecognizer()
+
     let imageList = ["ImageRowImage1","ImageRowImage2", "ImageRowImage3"]
     let recImage = UIImage(named: "player_record")
     let pauseImage = UIImage(named: "pause-icon")
@@ -16,13 +16,20 @@ class ImageController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        swipeRec.addTarget(self, action: "swipedView")
-        imageView.addGestureRecognizer(swipeRec)
+
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swipedView:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        imageView.addGestureRecognizer(swipeRight)
+
+        var swipeLeft = UISwipeGestureRecognizer(target: self, action: "swipedView:")
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        imageView.addGestureRecognizer(swipeLeft)
+
         imageView.userInteractionEnabled = true
         imageView.image = UIImage(named: imageList[0])
         imageView.frame = UIScreen.mainScreen().applicationFrame
         recordIndicatorView.hidden = true
-                println(self.navigationController?.navigationBar.topItem?.leftBarButtonItem)
+        // println(self.navigationController?.navigationBar.topItem?.leftBarButtonItem)
     }
     
     func showSaveOptionInNavBar() {
@@ -48,43 +55,37 @@ class ImageController: UIViewController {
         return true
     }
 
-    func swipedView(){
+    func swipedView(gesture: UIGestureRecognizer){
         
-        switch swipeRec.direction {
-                
-            case UISwipeGestureRecognizerDirection.Right :
-                println("User swiped right")
-                
-                
-                imageIndex--
-                
-                if imageIndex < 0 {
-                    
-                imageIndex = imageList.count - 1
-                    
-                }
-                
-                imageView.image = UIImage(named: imageList[imageIndex])
-            case UISwipeGestureRecognizerDirection.Left:
-                println("User swiped Left")
-               
-                
-                imageIndex++
-                if imageIndex > imageList.count - 1 {
-                    
-                    imageIndex = 0
-                    
-                }
-                
-                imageView.image = UIImage(named: imageList[imageIndex])
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             
-                
-                
-            default:
-                break //stops the code/codes nothing.
-                
-                
+            switch swipeGesture.direction {
+                case UISwipeGestureRecognizerDirection.Right:
+                    println("User swiped right")
+                    
+                    imageIndex--
+                    if imageIndex < 0 {
+                        imageIndex = imageList.count - 1
+                    }
+                    
+                    imageView.image = UIImage(named: imageList[imageIndex])
+
+                case UISwipeGestureRecognizerDirection.Left:
+                    println("User swiped left")
+                    
+                    imageIndex++
+                    if imageIndex > imageList.count - 1 {
+                        imageIndex = 0
+                    }
+                    
+                    imageView.image = UIImage(named: imageList[imageIndex])
+
+                default:
+                    break //stops the code/codes nothing.
             }
+
+        }
+        
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
     }
     

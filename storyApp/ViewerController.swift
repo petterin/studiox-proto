@@ -12,7 +12,7 @@ class ViewerController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var controllerImageView: UIImageView!
-    let swipeRec = UISwipeGestureRecognizer()
+
     let imageList = ["story1.jpg","story2.jpg", "story3.jpg", "story4.jpg", "story5.jpg"]
     let audioURLs = ["story1_audio", "story2_audio", "story3_audio", "story4_audio", "story5_audio"].map({(filename) -> NSURL in
         let path = NSBundle.mainBundle().pathForResource(filename, ofType: "m4a")!
@@ -30,8 +30,15 @@ class ViewerController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        swipeRec.addTarget(self, action: "swipedView")
-        imageView.addGestureRecognizer(swipeRec)
+
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "swipedView:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        imageView.addGestureRecognizer(swipeRight)
+        
+        var swipeLeft = UISwipeGestureRecognizer(target: self, action: "swipedView:")
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        imageView.addGestureRecognizer(swipeLeft)
+
         imageView.userInteractionEnabled = true
         imageView.image = UIImage(named: imageList[0])
         imageView.frame = UIScreen.mainScreen().applicationFrame
@@ -62,47 +69,39 @@ class ViewerController: UIViewController, AVAudioPlayerDelegate {
         return true
     }
     
-    func swipedView(){
-        
-        switch swipeRec.direction {
-            
-        case UISwipeGestureRecognizerDirection.Right :
-            println("User swiped right")
-            
-            imageIndex++
-            if imageIndex > imageList.count - 1 {
-                
-                imageIndex = 0
-                
+    func swipedView(gesture: UIGestureRecognizer){
+
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+
+            switch swipeGesture.direction {
+                case UISwipeGestureRecognizerDirection.Right :
+                    println("User swiped right")
+                    
+                    imageIndex++
+                    if imageIndex > imageList.count - 1 {
+                        imageIndex = 0
+                    }
+                    
+                    imageView.image = UIImage(named: imageList[imageIndex])
+                    audioPlayer = AVAudioPlayer(contentsOfURL: audioURLs[imageIndex], error: nil)
+                    audioPlayer.play()
+
+                case UISwipeGestureRecognizerDirection.Left:
+                    println("User swiped Left")
+                    
+                    imageIndex--
+                    if imageIndex < 0 {
+                        imageIndex = imageList.count - 1
+                    }
+                    
+                    imageView.image = UIImage(named: imageList[imageIndex])
+
+                default:
+                    break //stops the code/codes nothing.
             }
 
-            
-            imageView.image = UIImage(named: imageList[imageIndex])
-            audioPlayer = AVAudioPlayer(contentsOfURL: audioURLs[imageIndex], error: nil)
-            audioPlayer.play()
-        case UISwipeGestureRecognizerDirection.Left:
-            println("User swiped Left")
-            
-            imageIndex--
-            
-            if imageIndex < 0 {
-                
-                imageIndex = imageList.count - 1
-                
-            }
-            
-
-            
-            
-            imageView.image = UIImage(named: imageList[imageIndex])
-            
-            
-            
-        default:
-            break //stops the code/codes nothing.
-            
-            
         }
+
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
     }
     
