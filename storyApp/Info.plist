@@ -40,6 +40,10 @@
 			<false/>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Cookie-Regular.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
