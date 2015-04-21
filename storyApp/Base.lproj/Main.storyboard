@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -28,8 +28,35 @@
                                     <segue destination="88J-Jy-q6d" kind="show" id="D2B-io-bTS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camera Roll" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xee-i0-I2W">
-                                <rect key="frame" x="261" y="344" width="95" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Joulu 2010" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMw-Lp-NKO">
+                                <rect key="frame" x="252" y="641" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CameraRollWithoutText.png" translatesAutoresizingMaskIntoConstraints="NO" id="KNw-X9-mE4">
+                                <rect key="frame" x="508" y="137" width="333" height="177"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CameraRollWithoutText.png" translatesAutoresizingMaskIntoConstraints="NO" id="tau-fV-yin">
+                                <rect key="frame" x="142" y="428" width="333" height="177"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="joulu.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5rb-J4-nSf">
+                                <rect key="frame" x="149" y="437" width="319" height="190"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZYZ-k0-juy">
+                                <rect key="frame" x="155" y="146" width="306" height="168"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ravintolapaiva.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pcJ-hI-Vtx">
+                                <rect key="frame" x="543" y="146" width="274" height="175"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ravintolapäivä " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLs-PW-teK">
+                                <rect key="frame" x="638" y="344" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mökkireissu 2014" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xee-i0-I2W">
+                                <rect key="frame" x="241" y="335" width="135" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,11 +84,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ImageRow.png" translatesAutoresizingMaskIntoConstraints="NO" id="7M3-RJ-b0A">
-                                <rect key="frame" x="16" y="72" width="260" height="54"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apd-wJ-24s">
-                                <rect key="frame" x="16" y="84" width="51" height="30"/>
+                                <rect key="frame" x="31" y="99" width="210" height="136"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -69,9 +93,38 @@
                                     <segue destination="wXT-d9-dHq" kind="show" id="oaz-h5-JFq"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bPj-Hk-wiG">
+                                <rect key="frame" x="16" y="99" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Wle-gU-TIz">
+                                <rect key="frame" x="305" y="99" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki6.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TC8-Wn-f4U">
+                                <rect key="frame" x="601" y="277" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HLO-qM-eX8">
+                                <rect key="frame" x="305" y="277" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="E72-CI-HNk">
+                                <rect key="frame" x="16" y="277" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rTi-5C-BYb">
+                                <rect key="frame" x="590" y="99" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki7.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7tm-Xj-j3b">
+                                <rect key="frame" x="16" y="463" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki8.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vY1-26-Rt4">
+                                <rect key="frame" x="305" y="463" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mokki9.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K65-b9-SN6">
+                                <rect key="frame" x="601" y="463" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCR-by-gs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,6 +164,15 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rec-image.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zb2-LV-hjv">
                                 <rect key="frame" x="928" y="69" width="80" height="37"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD1-Qk-utN">
+                                <rect key="frame" x="882" y="0.0" width="142" height="120"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressed:" destination="wXT-d9-dHq" eventType="touchUpInside" id="cvl-77-Gao"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -123,6 +185,7 @@
                     <connections>
                         <outlet property="controllerImageView" destination="YGN-ko-2Bn" id="fZa-TH-I6S"/>
                         <outlet property="imageView" destination="0Jr-L6-lQ7" id="6Av-1C-l9F"/>
+                        <outlet property="recPause" destination="JD1-Qk-utN" id="N88-L0-OKm"/>
                         <outlet property="recordIndicatorView" destination="Zb2-LV-hjv" id="FYB-vX-y9W"/>
                     </connections>
                 </viewController>
@@ -349,10 +412,20 @@
     </scenes>
     <resources>
         <image name="CameraRollWithoutText.png" width="364" height="254"/>
-        <image name="ImageRow.png" width="1438" height="280"/>
         <image name="first" width="30" height="30"/>
+        <image name="joulu.jpg" width="2000" height="1500"/>
+        <image name="mokki1.jpg" width="3000" height="1987"/>
+        <image name="mokki2.jpg" width="3000" height="1987"/>
+        <image name="mokki3.jpg" width="1987" height="3000"/>
+        <image name="mokki4.jpg" width="3000" height="1987"/>
+        <image name="mokki5.jpg" width="3000" height="1987"/>
+        <image name="mokki6.jpg" width="3000" height="1987"/>
+        <image name="mokki7.jpg" width="1987" height="3000"/>
+        <image name="mokki8.jpg" width="3000" height="1987"/>
+        <image name="mokki9.jpg" width="1987" height="3000"/>
         <image name="play_icon.png" width="174" height="174"/>
         <image name="player_record.png" width="128" height="128"/>
+        <image name="ravintolapaiva.jpg" width="2000" height="1325"/>
         <image name="rec-image.png" width="252" height="252"/>
         <image name="second" width="30" height="30"/>
     </resources>

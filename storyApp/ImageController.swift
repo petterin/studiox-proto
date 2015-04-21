@@ -6,8 +6,10 @@ class ImageController: UIViewController {
     
     @IBOutlet weak var recordIndicatorView: UIImageView!
     @IBOutlet weak var controllerImageView: UIImageView!
+    @IBOutlet weak var recPause: UIButton!
 
-    let imageList = ["ImageRowImage1","ImageRowImage2", "ImageRowImage3"]
+    let imageList = ["mokki1.jpg","mokki2.jpg","mokki3.jpg","mokki4.jpg","mokki5.jpg","mokki6.jpg","mokki7.jpg","mokki8.jpg","mokki9.jpg","mokki10.jpg","mokki11.jpg","mokki12.jpg","mokki13.jpg"]
+    
     let recImage = UIImage(named: "player_record")
     let pauseImage = UIImage(named: "pause-icon")
     var recordingStartedAtLeastOnce = false
@@ -134,5 +136,11 @@ class ImageController: UIViewController {
         if(controllerImageView.hidden == false && recordingStartedAtLeastOnce) {
                 showSaveOptionInNavBar()
         }
+    }
+    
+    @IBAction func pressed(sender: UIButton!) {
+        controllerImageView.hidden = !controllerImageView.hidden
+        controllerImageView.image = recImage
+        
     }
 }
