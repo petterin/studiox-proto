@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11BA9C6E1AE671A900BDE24A /* Cookie-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11BA9C6D1AE671A900BDE24A /* Cookie-Regular.ttf */; };
+		11C34F7A1AE67B2800D04D55 /* kaption-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C34F791AE67B2800D04D55 /* kaption-logo@2x.png */; };
 		E69E1AE41AD97A20007573E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69E1AE31AD97A20007573E6 /* AppDelegate.swift */; };
 		E69E1AE61AD97A20007573E6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69E1AE51AD97A20007573E6 /* FirstViewController.swift */; };
 		E69E1AE81AD97A20007573E6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69E1AE71AD97A20007573E6 /* SecondViewController.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11BA9C6D1AE671A900BDE24A /* Cookie-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cookie-Regular.ttf"; sourceTree = "<group>"; };
+		11C34F791AE67B2800D04D55 /* kaption-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kaption-logo@2x.png"; sourceTree = "<group>"; };
 		E69E1ADE1AD97A20007573E6 /* storyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = storyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69E1AE21AD97A20007573E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E69E1AE31AD97A20007573E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				E69E1AE01AD97A20007573E6 /* storyApp */,
 				E69E1AF81AD97A20007573E6 /* storyAppTests */,
 				E69E1ADF1AD97A20007573E6 /* Products */,
+				11C34F791AE67B2800D04D55 /* kaption-logo@2x.png */,
 				E69E1B071AD97B2E007573E6 /* CameraRoll-Image.png */,
 				E69E1B091AD97CCD007573E6 /* ImageRow.png */,
 				E69E1B0B1AD98268007573E6 /* imageRowImage1.png */,
@@ -159,6 +164,7 @@
 		E69E1AE11AD97A20007573E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11BA9C6D1AE671A900BDE24A /* Cookie-Regular.ttf */,
 				E69E1AE21AD97A20007573E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -230,6 +236,7 @@
 				TargetAttributes = {
 					E69E1ADD1AD97A20007573E6 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 88URWRJFGB;
 					};
 					E69E1AF41AD97A20007573E6 = {
 						CreatedOnToolsVersion = 6.2;
@@ -263,6 +270,7 @@
 			files = (
 				E69E1B381ADD943C007573E6 /* story4_audio.m4a in Resources */,
 				E69E1B361ADD943C007573E6 /* story2_audio.m4a in Resources */,
+				11C34F7A1AE67B2800D04D55 /* kaption-logo@2x.png in Resources */,
 				E69E1B141AD99C01007573E6 /* player_record.png in Resources */,
 				E69E1B181AD9A9BD007573E6 /* rec-image.png in Resources */,
 				E69E1B161AD9A253007573E6 /* pause-icon.png in Resources */,
@@ -284,6 +292,7 @@
 				E69E1B421ADD9453007573E6 /* story5.jpg in Resources */,
 				E69E1B431ADD9453007573E6 /* story1.jpg in Resources */,
 				E69E1AED1AD97A20007573E6 /* Images.xcassets in Resources */,
+				11BA9C6E1AE671A900BDE24A /* Cookie-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = storyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = storyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
