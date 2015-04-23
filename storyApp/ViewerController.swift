@@ -13,8 +13,8 @@ class ViewerController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var controllerImageView: UIImageView!
 
-    let imageList = ["story1.jpg","story2.jpg", "story3.jpg", "story4.jpg", "story5.jpg"]
-    let audioURLs = ["story1_audio", "story2_audio", "story3_audio", "story4_audio", "story5_audio"].map({(filename) -> NSURL in
+    let imageList = ["mokki1.jpg","mokki2.jpg","mokki3.jpg","mokki4.jpg","mokki5.jpg","mokki6.jpg","mokki7.jpg","mokki8.jpg","mokki9.jpg","mokki10.jpg","mokki11.jpg","mokki12.jpg","mokki13.jpg"]
+    let audioURLs = ["story1_audio", "story2_audio", "story3_audio", "story4_audio", "story5_audio", "story4_audio", "story4_audio", "story4_audio", "story4_audio", "story4_audio", "story4_audio", "story4_audio", "story4_audio"].map({(filename) -> NSURL in
         let path = NSBundle.mainBundle().pathForResource(filename, ofType: "m4a")!
         return NSURL(fileURLWithPath: path)!})
     let playImage = UIImage(named: "play_icon")
@@ -44,11 +44,6 @@ class ViewerController: UIViewController, AVAudioPlayerDelegate {
         imageView.frame = UIScreen.mainScreen().applicationFrame
         audioPlayer = AVAudioPlayer(contentsOfURL: audioURLs[0], error: nil)
         audioPlayer.prepareToPlay()
-    }
-    
-    func showSaveOptionInNavBar() {
-        let saveButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.Done, target: self, action: "recordingDone")
-        self.navigationController?.navigationBar.topItem?.rightBarButtonItem = saveButton
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -105,30 +100,6 @@ class ViewerController: UIViewController, AVAudioPlayerDelegate {
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
     }
     
-    func recordingDone() {
-        var alert = UIAlertController(title: "Save", message: "Please give a name for your story", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: saveCompletionHandler))
-        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
-            textField.placeholder = "Amazing story"
-        })
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    func saveCompletionHandler(action:UIAlertAction!) {
-        let storyboard  = UIStoryboard(name: "Main", bundle: nil)
-        
-        let newStoriesController = storyboard.instantiateViewControllerWithIdentifier("mockStoriesAfterRecord") as! UIViewController
-        var oldTabs = self.tabBarController?.viewControllers
-        oldTabs![1] = newStoriesController
-        self.tabBarController?.setViewControllers(oldTabs!, animated: false)
-        self.tabBarController?.selectedIndex = 1
-        
-        
-        
-    }
-    
-    
-    
     @IBAction func controllerTapped(sender : AnyObject) {
         if(controllerImageView.hidden == false) {
             if(controllerImageView.image == pauseImage) {
@@ -149,9 +120,6 @@ class ViewerController: UIViewController, AVAudioPlayerDelegate {
     @IBAction func imageTapped(sender : AnyObject) {
         controllerImageView.hidden = !controllerImageView.hidden
         self.navigationController?.setNavigationBarHidden(!self.navigationController!.navigationBarHidden, animated: false)
-        if(controllerImageView.hidden == false && recordingStartedAtLeastOnce) {
-            showSaveOptionInNavBar()
-        }
     }
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer!,
