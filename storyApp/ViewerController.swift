@@ -18,7 +18,7 @@ class ViewerController: UIViewController, AVAudioPlayerDelegate {
         let path = NSBundle.mainBundle().pathForResource(filename, ofType: "m4a")!
         return NSURL(fileURLWithPath: path)!})
     let playImage = UIImage(named: "play_icon")
-    let pauseImage = UIImage(named: "pause-icon")
+    let pauseImage = UIImage(named: "pause_icon")
     var recordingStartedAtLeastOnce = false
     
     var imageIndex = 0

@@ -11,7 +11,7 @@ class ImageController: UIViewController {
     let imageList = ["mokki1.jpg","mokki2.jpg","mokki3.jpg","mokki4.jpg","mokki5.jpg","mokki6.jpg","mokki7.jpg","mokki8.jpg","mokki9.jpg","mokki10.jpg","mokki11.jpg","mokki12.jpg","mokki13.jpg"]
     
     let recImage = UIImage(named: "player_record")
-    let pauseImage = UIImage(named: "pause-icon")
+    let pauseImage = UIImage(named: "pause_icon")
     var recordingStartedAtLeastOnce = false
     
     var imageIndex = 0
